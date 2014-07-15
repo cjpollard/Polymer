@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Polytest</title>
+    <script src="../bower_components/platform/platform.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="../bower_components/core-icons/core-icons.html">
+    <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="../bower_components/core-item/core-item.html">
+    <link rel="import" href="../bower_components/core-menu/core-menu.html">
+    <link rel="import" href="../bower_components/core-drawer-panel/core-drawer-panel.html">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body fullbleed unresolved>
+<core-drawer-panel id="drawerPanel">
+
+    <core-header-panel drawer>
+        <core-toolbar id="navheader'">
+            <span></span>
+        </core-toolbar>
+        <core-menu>
+            <core-item label="One"></core-item>
+            <core-item label="Two"></core-item>
+        </core-menu>
+    </core-header-panel>
+
+    <core-header-panel main>
+        <core-toolbar id="mainheader">
+            <paper-icon-button
+                    id="navicon" icon="menu"></paper-icon-button>
+            <span flex>Title</span>
+        </core-toolbar>
+        <div class="content">
+            If drawer is hidden, press button to display drawer.
+        </div>
+    </core-header-panel>
+
+</core-drawer-panel>
+</body>
+</html>
