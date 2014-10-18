@@ -3,8 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Polytest</title>
+    
     <script src="../bower_components/platform/platform.js"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
     <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
     <link rel="import" href="../bower_components/core-icons/core-icons.html">
@@ -13,6 +16,9 @@
     <link rel="import" href="../bower_components/core-menu/core-menu.html">
     <link rel="import" href="../bower_components/core-menu/core-submenu.html">
     <link rel="import" href="../bower_components/core-drawer-panel/core-drawer-panel.html">
+    
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body fullbleed unresolved>
@@ -22,13 +28,34 @@
         <core-toolbar id="navheader'">
             <span></span>
         </core-toolbar>
-        <core-menu selected="0">
-            <core-item label="One"></core-item>
-            <core-item label="Two"></core-item>
-            <core-submenu label="More">
-              <core-item label="Three"></core-item>
-              <core-item label="Four"></core-item>
+        <core-menu selected="0" on-core-select="{{pageLoad}}">
+            <core-item label="Home"></core-item>
+            <core-item label="Services"></core-item>
+            <core-item label="This Week's Bulletins"></core-item>
+            <core-submenu label="Our Lady's Parish">
+              <core-item label="St. Herbert's Centre"></core-item>
+              <core-item label="Pictures"></core-item>
+              <core-item label="Walk Pictures"></core-item>
+              <core-item label="Parish History"></core-item>
+              <core-item label="Parish Information"></core-item>
+              <core-item label="St. Charles Borromeo"></core-item>
+              <core-item label="St. Herbert & his island"></core-item>
+              <core-submenu label="Keswick Floods '09">
+              	<core-item label="Community Recovery"></core-item>
+              	<core-item label="Building Recovery"></core-item>
+              	<core-item label="Thanks for the help"></core-item>
+              	<core-item label="Flood & Recovery Photos"></core-item>
+              </core-submenu>
             </core-submenu>
+            <core-submenu label="St. Joseph's Parish">
+              <core-item label="Church Hall"></core-item>
+              <core-item label="Pictures"></core-item>
+              <core-item label="St. Joseph's School"></core-item>
+              <core-item label="Cockermouth Floods '09"></core-item>              
+            </core-submenu>
+            <core-item label="Preparation For Marriage"></core-item>
+            <core-item label="Useful Links"></core-item>
+            <core-item label="Lakeland Mass Times"></core-item>
         </core-menu>
     </core-header-panel>
 
@@ -36,13 +63,17 @@
         <core-toolbar id="mainheader">
             <paper-icon-button
                     id="navicon" icon="menu"></paper-icon-button>
-            <span flex>Title</span>
+            <span flex>Our Lady of the Lakes, Keswick and St. Joseph's, Cockermouth</span>
         </core-toolbar>
-        <div class="content">
-            If drawer is hidden, press button to display drawer.
+        <div id="page" class="content">
+            
         </div>
     </core-header-panel>
 
-</core-drawer-panel>
+</core-drawer-panel>#
+
+
+<script src="js/main.js"></script>
+<script src="js/pageload.js"></script>
 </body>
 </html>
